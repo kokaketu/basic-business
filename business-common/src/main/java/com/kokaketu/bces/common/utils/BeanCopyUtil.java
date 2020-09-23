@@ -1,4 +1,4 @@
-package com.kokaketu.basicbusiness.common.utils;
+package com.kokaketu.bces.common.utils;
 
 import org.springframework.cglib.beans.BeanCopier;
 import org.springframework.cglib.beans.BeanMap;

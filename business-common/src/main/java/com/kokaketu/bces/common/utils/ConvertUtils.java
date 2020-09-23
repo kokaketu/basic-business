@@ -1,4 +1,4 @@
-package com.kokaketu.basicbusiness.common.utils;
+package com.kokaketu.bces.common.utils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,4 +1,4 @@
-package com.kokaketu.basicbusiness.common.service.impl;
+package com.kokaketu.bces.common.service.impl;
 
 
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
@@ -8,10 +8,10 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.*;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.toolkit.SqlHelper;
-import com.kokaketu.basicbusiness.common.page.PageData;
-import com.kokaketu.basicbusiness.common.service.BaseService;
-import com.kokaketu.basicbusiness.common.constant.Constant;
-import com.kokaketu.basicbusiness.common.utils.ConvertUtils;
+import com.kokaketu.bces.common.page.PageData;
+import com.kokaketu.bces.common.service.BaseService;
+import com.kokaketu.bces.common.constant.Constant;
+import com.kokaketu.bces.common.utils.ConvertUtils;
 import org.apache.ibatis.binding.MapperMethod;
 import org.apache.ibatis.session.SqlSession;
 import org.mybatis.spring.SqlSessionUtils;

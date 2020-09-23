@@ -1,4 +1,4 @@
-package com.kokaketu.basicbusiness.common.service;
+package com.kokaketu.bces.common.service;
 
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 

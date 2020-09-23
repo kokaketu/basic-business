@@ -1,4 +1,4 @@
-package com.kokaketu.basicbusiness.common.constant;
+package com.kokaketu.bces.common.constant;
 
 /**
  * 常量
