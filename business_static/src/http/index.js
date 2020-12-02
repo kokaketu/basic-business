@@ -4,11 +4,11 @@ import store from '@/vuex'
 
 let origin
 if (window.location.hostname.indexOf('local') !== -1 || window.location.hostname.indexOf('dev') !== -1) {
-  origin = 'http://dev-asset.caicchina.com'
+  origin = 'http://dev.business.com'
 } else if (window.location.hostname.indexOf('test') !== -1) {
-  origin = 'http://test-asset.caicchina.com'
+  origin = 'http://test.business.com'
 } else {
-  origin = 'https://asset.caicchina.com'
+  origin = 'https://pro.business.com'
 }
 
 // axios 配置

@@ -12,12 +12,12 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/': {
-        target: 'http://dev-asset.caicchina.com',
+        target: 'http://dev.business.com',
         changeOrigin: true,
       }
     },
     // Various Dev Server settings
-    host: 'local-asset.caicchina.com', // can be overwritten by process.env.HOST
+    host: 'local.business.com', // can be overwritten by process.env.HOST
     port: 80, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
