@@ -1,0 +1,519 @@
+@charset "UTF-8";
+#diagnosis-office {
+  background: #fff;
+}
+#diagnosis-office .diagnosis-report {
+  font-family: "宋体", "SimSun";
+  width: 1000px;
+  margin: 0 auto;
+  /* 公共样式 */
+  /*页面footer*/
+  /* 封面 */
+  /* 相关说明 */
+  /* 诊断报告 */
+  /* 本体信息 */
+  /* 免责申明 */
+}
+#diagnosis-office .diagnosis-report .report-preview-part {
+  height: 100px;
+  line-height: 100px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  background: #2d76b6 url("./img/header-left.png") right center no-repeat;
+  background-size: contain;
+}
+#diagnosis-office .diagnosis-report .report-preview-part .part {
+  float: left;
+  width: 100px;
+  height: 100px;
+  padding: 0 10px;
+  text-align: left;
+  border-right: 5px solid #fff;
+}
+#diagnosis-office .diagnosis-report .report-preview-part .title {
+  float: left;
+  padding: 0 10px;
+  letter-spacing: 5px;
+}
+#diagnosis-office .diagnosis-report .report-preview-page .header {
+  margin-top: 20px;
+  overflow: hidden;
+}
+#diagnosis-office .diagnosis-report .report-preview-page .header .left-side {
+  float: left;
+}
+#diagnosis-office .diagnosis-report .report-preview-page .header .left-side .project-name {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 30px;
+  color: #2D75B6;
+}
+#diagnosis-office .diagnosis-report .report-preview-page .header .left-side .project-address {
+  color: #999;
+}
+#diagnosis-office .diagnosis-report .report-preview-page .header .right-side {
+  float: right;
+  text-align: right;
+  margin-top: 10px;
+  text-align: right;
+  font-size: 13px;
+  color: #000;
+}
+#diagnosis-office .diagnosis-report .report-preview-title {
+  margin-top: 50px;
+}
+#diagnosis-office .diagnosis-report .report-preview-title .title {
+  padding: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  border-bottom: 1px solid #2d76b6;
+}
+#diagnosis-office .diagnosis-report .report-preview-title .origin {
+  text-align: right;
+  margin-top: 10px;
+  text-align: right;
+  font-size: 13px;
+  color: #000;
+}
+#diagnosis-office .diagnosis-report .report-preview-page-summary {
+  display: flex;
+  justify-content: center;
+}
+#diagnosis-office .diagnosis-report .report-preview-page-summary .item {
+  margin: 0 20px;
+  text-align: center;
+}
+#diagnosis-office .diagnosis-report .report-preview-page-summary .item .label {
+  padding: 5px 0;
+  font-size: 24px;
+  color: #999;
+}
+#diagnosis-office .diagnosis-report .report-preview-page-summary .item .value {
+  padding: 5px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #2D75B6;
+  border-top: 1px solid #2D75B6;
+}
+#diagnosis-office .diagnosis-report .report-preview-page-summary .item img {
+  vertical-align: middle;
+  margin-left: 4px;
+  height: 15px;
+}
+#diagnosis-office .diagnosis-report .report-preview-page-summary .item .red {
+  font-size: 16px;
+  font-weight: bold;
+  color: #C00000;
+}
+#diagnosis-office .diagnosis-report .report-preview-page-summary .item .green {
+  font-size: 16px;
+  font-weight: bold;
+  color: #548235;
+}
+#diagnosis-office .diagnosis-report .report-preview-page .h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 180px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #2d76b6;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #2d76b6;
+}
+#diagnosis-office .diagnosis-report .echart-group .chart-title {
+  margin-top: 30px;
+  text-align: center;
+}
+#diagnosis-office .diagnosis-report .legends {
+  display: flex;
+  justify-content: center;
+}
+#diagnosis-office .diagnosis-report .legends .legend {
+  margin: 0 20px;
+  text-align: center;
+}
+#diagnosis-office .diagnosis-report .legends .bar .icon {
+  display: inline-block;
+  width: 30px;
+  height: 10px;
+}
+#diagnosis-office .diagnosis-report .legends .line .icon {
+  display: inline-block;
+  width: 30px;
+  height: 2px;
+  vertical-align: top;
+  margin-top: 7px;
+}
+#diagnosis-office .diagnosis-report .evaluation-wrapper .item {
+  position: relative;
+  padding-left: 80px;
+  font-size: 16px;
+  line-height: 30px;
+  color: #000;
+}
+#diagnosis-office .diagnosis-report .evaluation-wrapper .item label {
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+#diagnosis-office .diagnosis-report .progress-wrapper {
+  display: flex;
+  font-weight: bold;
+  color: #2d76b6;
+}
+#diagnosis-office .diagnosis-report .progress-wrapper label {
+  position: relative;
+  padding-left: 18px;
+}
+#diagnosis-office .diagnosis-report .progress-wrapper label::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 2px;
+  content: " ";
+  height: 8px;
+  width: 8px;
+  border: 2px solid #2d76b6;
+}
+#diagnosis-office .diagnosis-report .progress-wrapper .progress {
+  position: relative;
+  height: 10px;
+  width: 500px;
+  margin: 2px 10px;
+  background: #fff;
+  border: 1px solid #2d76b6;
+}
+#diagnosis-office .diagnosis-report .progress-wrapper .progress .bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 10px;
+  background: #67c23a;
+}
+#diagnosis-office .diagnosis-report .evaluation {
+  position: relative;
+  margin: 20px 0;
+  padding-left: 50px;
+}
+#diagnosis-office .diagnosis-report .evaluation label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #2d76b6;
+  font-weight: bold;
+}
+#diagnosis-office .diagnosis-report .table-wrapper table {
+  width: 100%;
+}
+#diagnosis-office .diagnosis-report .table-wrapper table thead {
+  border-top: 1px solid #333;
+  border-right: 1px solid #333;
+  background: #f5f5f5;
+}
+#diagnosis-office .diagnosis-report .table-wrapper table tbody {
+  border-right: 1px solid #333;
+}
+#diagnosis-office .diagnosis-report .table-wrapper table th, #diagnosis-office .diagnosis-report .table-wrapper table td {
+  padding: 8px 10px;
+  text-align: center;
+  border-left: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+#diagnosis-office .diagnosis-report .opreate {
+  margin-top: 30px;
+  padding-left: 20px;
+}
+#diagnosis-office .diagnosis-report .opreate .title {
+  margin-top: 20px;
+  line-height: 30px;
+}
+#diagnosis-office .diagnosis-report .report-preview-footer {
+  padding: 20px;
+  overflow: hidden;
+}
+#diagnosis-office .diagnosis-report .report-preview-footer .left-side {
+  float: left;
+}
+#diagnosis-office .diagnosis-report .report-preview-footer .left-side img {
+  height: 20px;
+}
+#diagnosis-office .diagnosis-report .report-preview-footer .right-side {
+  float: right;
+}
+#diagnosis-office .diagnosis-report .report-preview-footer .right-side .company-info {
+  position: absolute;
+  right: 0;
+  bottom: -10px;
+  min-width: 330px;
+  line-height: 28px;
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+}
+#diagnosis-office .diagnosis-report .report-preview-footer .right-side .company-info .company-ename {
+  font-weight: bold;
+  font-size: 16px;
+  margin-left: -35px;
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+}
+#diagnosis-office .diagnosis-report .report-preview-front-cover {
+  position: relative;
+}
+#diagnosis-office .diagnosis-report .report-preview-front-cover .banner {
+  position: relative;
+}
+#diagnosis-office .diagnosis-report .report-preview-front-cover .banner img {
+  width: 100%;
+}
+#diagnosis-office .diagnosis-report .report-preview-front-cover .banner .h1 {
+  position: absolute;
+  z-index: 2;
+  left: 10px;
+  bottom: 10px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 30px;
+  color: #fff;
+}
+#diagnosis-office .diagnosis-report .report-preview-front-cover .content {
+  position: relative;
+  height: 324px;
+  margin-left: 60px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+#diagnosis-office .diagnosis-report .report-preview-front-cover .content .date {
+  letter-spacing: 2px;
+  color: #000;
+  margin-bottom: 5px;
+  margin-top: 20px;
+  font-size: 24px;
+}
+#diagnosis-office .diagnosis-report .report-preview-front-cover .content .report-name {
+  letter-spacing: 1px;
+  font-size: 36px;
+  color: #142C60;
+}
+#diagnosis-office .diagnosis-report .report-preview-explain .explain .tip {
+  margin-top: 10px;
+  margin-bottom: 50px;
+  text-align: right;
+  font-size: 13px;
+  color: #000;
+}
+#diagnosis-office .diagnosis-report .report-preview-explain .explain .title {
+  position: relative;
+  padding: 20px 20px;
+  font-size: 16px;
+  margin: 0;
+  color: #5C9BD5;
+  font-weight: bold;
+}
+#diagnosis-office .diagnosis-report .report-preview-explain .explain .title::after {
+  position: absolute;
+  left: 0;
+  top: 34px;
+  content: " ";
+  height: 4px;
+  width: 12px;
+  border-bottom: 2px solid #5C9BD5;
+  border-left: 2px solid #5C9BD5;
+  -webkit-transform: rotate(-60deg);
+  -ms-transform: rotate(-60deg);
+  transform: rotate(-60deg);
+}
+#diagnosis-office .diagnosis-report .report-preview-explain .explain p {
+  font-size: 18px;
+  color: #000;
+  line-height: 36px;
+  letter-spacing: 2px;
+}
+#diagnosis-office .diagnosis-report .report-preview-result-cover .banner {
+  position: relative;
+}
+#diagnosis-office .diagnosis-report .report-preview-result-cover .banner .h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+#diagnosis-office .diagnosis-report .report-preview-result-cover .banner .date {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+#diagnosis-office .diagnosis-report .report-preview-result-cover .banner img {
+  width: 100%;
+}
+#diagnosis-office .diagnosis-report .report-preview-result-cover .content .left-side {
+  float: left;
+  width: 30%;
+  border-top: 1px solid #2E5597;
+}
+#diagnosis-office .diagnosis-report .report-preview-result-cover .content .information .h5 {
+  margin: 0;
+  color: #000;
+  font-weight: bold;
+  padding-top: 30px;
+  font-size: 16px;
+}
+#diagnosis-office .diagnosis-report .report-preview-result-cover .content .information p {
+  line-height: 30px;
+  color: #000;
+}
+#diagnosis-office .diagnosis-report .report-preview-result-cover .content .right-side {
+  float: left;
+  margin-left: 1%;
+  width: 69%;
+  padding-bottom: 50px;
+  background: #f5f5f5;
+}
+#diagnosis-office .diagnosis-report .report-preview-result-cover .content .right-side .items .item {
+  float: left;
+  width: 33%;
+  padding-left: 30px;
+  height: 130px;
+  margin-top: 40px;
+  box-sizing: border-box;
+}
+#diagnosis-office .diagnosis-report .report-preview-result-cover .content .right-side .items .item p {
+  margin: 0;
+  line-height: 22px;
+  font-size: 14px;
+  color: #000;
+}
+#diagnosis-office .diagnosis-report .report-preview-result-cover .content .right-side .items .item .header {
+  height: 35px;
+}
+#diagnosis-office .diagnosis-report .report-preview-result-cover .content .right-side .items .item .header img {
+  float: left;
+  height: 35px;
+  width: 35px;
+  vertical-align: middle;
+}
+#diagnosis-office .diagnosis-report .report-preview-result-cover .content .right-side .items .item .header .h1 {
+  float: left;
+  font-weight: bold;
+  margin: 0 0 0 10px;
+  line-height: 35px;
+  font-size: 24px;
+  color: #2E5597;
+}
+#diagnosis-office .diagnosis-report .report-preview-result-cover .content .right-side .items .item .title {
+  margin: 10px 0 5px 0;
+  color: #2D75B6;
+  font-size: 16px;
+  font-weight: bold;
+}
+#diagnosis-office .diagnosis-report .report-preview-result-cover .content .right-side .items .item .red {
+  color: #C00000;
+  text-decoration: underline;
+}
+#diagnosis-office .diagnosis-report .report-preview-result-cover .content .right-side .items .item .green {
+  color: #548235;
+  text-decoration: underline;
+}
+#diagnosis-office .diagnosis-report .report-preview-result-cover .content .right-side .items .item .blue {
+  text-decoration: underline;
+}
+#diagnosis-office .diagnosis-report .report-preview-main .block .left-side {
+  float: left;
+  width: 250px;
+}
+#diagnosis-office .diagnosis-report .report-preview-main .block .right-side {
+  float: left;
+  width: calc(100% - 250px);
+}
+#diagnosis-office .diagnosis-report .report-preview-main .block .right-side .table {
+  width: 48%;
+  margin-left: 2%;
+  float: left;
+  line-height: 25px;
+  font-size: 12px;
+}
+#diagnosis-office .diagnosis-report .report-preview-main .block .right-side .table .thead {
+  border-bottom: 1px solid #333;
+  color: #333;
+  font-weight: bold;
+}
+#diagnosis-office .diagnosis-report .report-preview-main .block .right-side .table .tbody .tr {
+  border-bottom: 1px solid #ccc;
+  color: #333;
+}
+#diagnosis-office .diagnosis-report .report-preview-main .block .right-side .table .tbody .tr .td {
+  float: left;
+  width: 72%;
+  color: #000;
+}
+#diagnosis-office .diagnosis-report .report-preview-main .block .right-side .table .tbody .tr .td:nth-child(1) {
+  width: 28%;
+  color: #999;
+}
+#diagnosis-office .diagnosis-report .report-preview-main .block .green {
+  color: #548235;
+}
+#diagnosis-office .diagnosis-report .report-preview-main .h2 {
+  margin: 0;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #0293d0;
+}
+#diagnosis-office .diagnosis-report .report-preview-main .h2 span {
+  display: inline-block;
+  line-height: 30px;
+  font-size: 14px;
+}
+#diagnosis-office .diagnosis-report .report-preview-main .h2 img {
+  width: 8px;
+  margin: 5px;
+  vertical-align: middle;
+  margin-top: 6px;
+}
+#diagnosis-office .diagnosis-report .report-preview-main .information {
+  margin-bottom: 30px;
+}
+#diagnosis-office .diagnosis-report .report-preview-main .information .title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0293d0;
+}
+#diagnosis-office .diagnosis-report .report-preview-main .information .distance {
+  line-height: 24px;
+  color: #999;
+}
+#diagnosis-office .diagnosis-report .report-preview-main .information img {
+  width: 100%;
+}
+#diagnosis-office .diagnosis-report .report-preview-main .level .left-side {
+  float: left;
+  width: 50%;
+}
+#diagnosis-office .diagnosis-report .report-preview-main .level .right-side {
+  float: left;
+  width: 50%;
+}
+#diagnosis-office .diagnosis-report .report-preview-main .diagnose .left-side {
+  float: left;
+  width: 50%;
+}
+#diagnosis-office .diagnosis-report .report-preview-main .diagnose .right-side {
+  float: left;
+  width: 50%;
+}
+#diagnosis-office .diagnosis-report .report-preview-affirming h3 {
+  margin: 0;
+  padding: 20px 0 20px 0;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #2D75B6;
+}
+#diagnosis-office .diagnosis-report .report-preview-affirming p {
+  line-height: 40px;
+  margin-bottom: 10px;
+  font-size: 17px;
+  color: #000;
+}

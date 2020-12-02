@@ -1,0 +1,112 @@
+let businessBaseInfo = [{
+  hasUnit: false,
+  type: 'text',
+  name: '项目',
+  key: 'assetName',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'text',
+  name: '楼栋',
+  key: 'buildingName',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'text',
+  name: '楼层名称',
+  key: 'floorName',
+  value: ''
+}, {
+  hasUnit: true,
+  unit: '㎡',
+  type: 'number',
+  name: '总建筑面积',
+  key: 'totalBuildingArea',
+  value: ''
+}, {
+  hasUnit: true,
+  unit: '㎡',
+  type: 'number',
+  name: '套内面积',
+  key: 'innerArea',
+  value: ''
+}, {
+  hasUnit: true,
+  unit: '㎡',
+  type: 'number',
+  name: '经营面积',
+  key: 'businessArea',
+  value: ''
+}, {
+  hasUnit: true,
+  unit: '㎡',
+  type: 'number',
+  name: '可出租面积',
+  key: 'rentableArea',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'text',
+  name: '平面图显示排序',
+  key: 'sort',
+  value: ''
+}]
+
+let officeBaseInfo = [{
+  hasUnit: false,
+  type: 'text',
+  name: '项目',
+  key: 'assetName',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'text',
+  name: '楼栋',
+  key: 'buildingName',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'text',
+  name: '楼层名称',
+  key: 'floorName',
+  value: ''
+}, {
+  hasUnit: true,
+  unit: '㎡',
+  type: 'number',
+  name: '总建筑面积',
+  key: 'totalBuildingArea',
+  value: ''
+}, {
+  hasUnit: true,
+  unit: '㎡',
+  type: 'number',
+  name: '套内面积',
+  key: 'innerArea',
+  value: ''
+}, {
+  hasUnit: true,
+  unit: '㎡',
+  type: 'number',
+  name: '配套商业面积',
+  key: 'businessArea',
+  value: ''
+}, {
+  hasUnit: true,
+  unit: '㎡',
+  type: 'number',
+  name: '可出租面积',
+  key: 'rentableArea',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'text',
+  name: '平面图显示排序',
+  key: 'sort',
+  value: ''
+}]
+
+export {
+  businessBaseInfo,
+  officeBaseInfo
+}

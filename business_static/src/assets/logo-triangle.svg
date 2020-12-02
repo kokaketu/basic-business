@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="12px" viewBox="0 0 8 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>矩形</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="logo" transform="translate(-181.000000, -147.000000)" fill="#FFFFFF">
+            <g id="分组-28" transform="translate(176.000000, 146.000000)">
+                <path d="M3.06944656,2.38577395 L9.88472293,2.81251385 C10.4359282,2.84702768 10.8547894,3.32184682 10.8202755,3.87305208 C10.8050515,4.11618857 10.7015971,4.34540589 10.5293369,4.51766605 L4.14080043,10.9062025 C3.75027614,11.2967268 3.11711116,11.2967268 2.72658687,10.9062025 C2.55432671,10.7339424 2.45087227,10.504725 2.43564823,10.2615885 L2.00890833,3.44631218 C1.9743945,2.89510692 2.39325567,2.42028778 2.94446093,2.38577395 C2.98608205,2.38316783 3.02782544,2.38316783 3.06944656,2.38577395 Z" id="矩形" transform="translate(6.475138, 6.852004) rotate(-225.000000) translate(-6.475138, -6.852004) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

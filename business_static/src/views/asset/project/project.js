@@ -1,0 +1,398 @@
+let businessBaseInfo = [{
+  hasUnit: false,
+  type: 'text',
+  name: '项目编号',
+  key: 'assetCode',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'text',
+  name: '项目名称',
+  key: 'assetName',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'text',
+  name: '项目简称',
+  key: 'shortName',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'text',
+  name: '所在区域',
+  key: 'areaName',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'text',
+  name: '详细地址',
+  key: 'address',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'text',
+  name: '业态',
+  key: 'assetLayoutString',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'text',
+  name: '资产分类',
+  key: 'assetStatusString',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'text',
+  name: '经营阶段',
+  key: 'operationStageString',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'text',
+  name: '商业类型',
+  key: 'businessTypeString',
+  value: ''
+}, {
+  hasUnit: true,
+  unit: '㎡',
+  type: 'number',
+  name: '总建筑面积',
+  key: 'totalBuildingArea',
+  value: ''
+}, {
+  hasUnit: true,
+  unit: '㎡',
+  type: 'number',
+  name: '地上建筑面积',
+  key: 'groundAreaUp',
+  value: ''
+}, {
+  hasUnit: true,
+  unit: '㎡',
+  type: 'number',
+  name: '地下建筑面积',
+  key: 'groundAreaDown',
+  value: ''
+}, {
+  hasUnit: true,
+  unit: '㎡',
+  type: 'number',
+  name: '总套内面积',
+  key: 'innerArea',
+  value: ''
+}, {
+  hasUnit: true,
+  unit: '㎡',
+  type: 'number',
+  name: '总经营面积',
+  key: 'operatingArea',
+  value: ''
+}, {
+  hasUnit: true,
+  unit: '㎡',
+  type: 'number',
+  name: '总可出租面积',
+  key: 'rentableArea',
+  value: ''
+}, {
+  hasUnit: true,
+  unit: '个',
+  type: 'number',
+  name: '车位数',
+  key: 'parkingLotNum',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'date',
+  name: '土地获取时间',
+  key: 'landAcquisitionDate',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'date',
+  name: '竣工时间',
+  key: 'completedDate',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'date',
+  name: '交付时间',
+  key: 'deliverDate',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'date',
+  name: '开业时间',
+  key: 'openingDate',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'text',
+  name: '产权年限',
+  key: 'yearsOfOwnership',
+  value: ''
+}]
+
+let officeBaseInfo = [{
+  hasUnit: false,
+  type: 'text',
+  name: '项目编号',
+  key: 'assetCode',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'text',
+  name: '项目名称',
+  key: 'assetName',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'text',
+  name: '项目简称',
+  key: 'shortName',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'text',
+  name: '所在区域',
+  key: 'areaName',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'text',
+  name: '详细地址',
+  key: 'address',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'text',
+  name: '业态',
+  key: 'assetLayoutString',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'text',
+  name: '资产分类',
+  key: 'assetStatusString',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'text',
+  name: '经营阶段',
+  key: 'operationStageString',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'text',
+  name: '环保认证',
+  key: 'environmentalCertificationString',
+  value: ''
+}, {
+  hasUnit: true,
+  unit: '㎡',
+  type: 'number',
+  name: '总建筑面积',
+  key: 'totalBuildingArea',
+  value: ''
+}, {
+  hasUnit: true,
+  unit: '㎡',
+  type: 'number',
+  name: '地上建筑面积',
+  key: 'groundAreaUp',
+  value: ''
+}, {
+  hasUnit: true,
+  unit: '㎡',
+  type: 'number',
+  name: '地下建筑面积',
+  key: 'groundAreaDown',
+  value: ''
+}, {
+  hasUnit: true,
+  unit: '㎡',
+  type: 'number',
+  name: '总套内面积',
+  key: 'innerArea',
+  value: ''
+}, {
+  hasUnit: true,
+  unit: '㎡',
+  type: 'number',
+  name: '总配套商业面积',
+  key: 'businessArea',
+  value: ''
+}, {
+  hasUnit: true,
+  unit: '㎡',
+  type: 'number',
+  name: '总可出租面积',
+  key: 'rentableArea',
+  value: ''
+}, {
+  hasUnit: true,
+  unit: '个',
+  type: 'number',
+  name: '车位数',
+  key: 'parkingLotNum',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'date',
+  name: '土地获取时间',
+  key: 'landAcquisitionDate',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'date',
+  name: '竣工时间',
+  key: 'completedDate',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'date',
+  name: '交付时间',
+  key: 'deliverDate',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'text',
+  name: '产权年限',
+  key: 'yearsOfOwnership',
+  value: ''
+}]
+
+let parkBaseInfo = [{
+  hasUnit: false,
+  type: 'text',
+  name: '项目编号',
+  key: 'assetCode',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'text',
+  name: '项目名称',
+  key: 'assetName',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'text',
+  name: '项目简称',
+  key: 'shortName',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'text',
+  name: '所在区域',
+  key: 'areaName',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'text',
+  name: '详细地址',
+  key: 'address',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'text',
+  name: '业态',
+  key: 'assetLayoutString',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'text',
+  name: '资产分类',
+  key: 'assetStatusString',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'text',
+  name: '经营阶段',
+  key: 'operationStageString',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'text',
+  name: '园区分类',
+  key: 'parkTypeStr',
+  value: ''
+}, {
+  hasUnit: true,
+  unit: '㎡',
+  type: 'number',
+  name: '总建筑面积',
+  key: 'totalBuildingArea',
+  value: ''
+}, {
+  hasUnit: true,
+  unit: '㎡',
+  type: 'number',
+  name: '地上建筑面积',
+  key: 'groundAreaUp',
+  value: ''
+}, {
+  hasUnit: true,
+  unit: '㎡',
+  type: 'number',
+  name: '地下建筑面积',
+  key: 'groundAreaDown',
+  value: ''
+}, {
+  hasUnit: true,
+  unit: '㎡',
+  type: 'number',
+  name: '总套内面积',
+  key: 'innerArea',
+  value: ''
+}, {
+  hasUnit: true,
+  unit: '㎡',
+  type: 'number',
+  name: '总配套商业面积',
+  key: 'businessArea',
+  value: ''
+}, {
+  hasUnit: true,
+  unit: '㎡',
+  type: 'number',
+  name: '总可出租面积',
+  key: 'rentableArea',
+  value: ''
+}, {
+  hasUnit: true,
+  unit: '个',
+  type: 'number',
+  name: '车位数',
+  key: 'parkingLotNum',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'date',
+  name: '土地获取时间',
+  key: 'landAcquisitionDate',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'date',
+  name: '竣工时间',
+  key: 'completedDate',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'date',
+  name: '交付时间',
+  key: 'deliverDate',
+  value: ''
+}, {
+  hasUnit: false,
+  type: 'text',
+  name: '产权年限',
+  key: 'yearsOfOwnership',
+  value: ''
+}]
+
+export {
+  businessBaseInfo,
+  officeBaseInfo,
+  parkBaseInfo
+}

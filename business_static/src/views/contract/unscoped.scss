@@ -1,0 +1,146 @@
+.contract .state{
+  line-height: 28px;
+}
+.contract .noData{
+  width: 1000px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 14px;
+  color: #909399;
+}
+.contract .btn-group{
+  padding: 20px;
+  .el-button{
+    margin-left: 0;
+    margin-right: 20px;
+  }
+}
+.contract .el-badge__content{
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  transform: scale(0.8);
+  right: -10px;
+  top: -2px;
+}
+.contract .el-table--enable-row-hover .el-table__body tr:hover > td{
+  background: none;
+}
+.contract .el-form-item__label{
+  display: block !important;
+  line-height: 16px !important;
+  margin-bottom: 5px;
+  text-align: left !important;
+  color: #333;
+}
+.contract .input-unit .el-input__inner{
+  padding-right: 30px;
+}
+.contract .el-input-group__append{
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 42px;
+  padding: 0;
+  line-height: 30px;
+  text-align: center;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+}
+
+.contract .table-input td {
+  padding: 0;
+}
+.contract .table-input th {
+  height: 46px;
+  padding: 0;
+  background:rgba(251,251,251,1);
+  color: #808080;
+}
+.contract .el-date-editor .el-range-separator{
+  line-height: 40px;
+}
+.contract .el-table thead{
+  background:rgba(247,247,247,1);
+}
+.contract .el-table td .cell{
+  background: #fff;
+}
+.contract .el-table td .cell .el-input.is-disabled .el-input__inner, .el-textarea.is-disabled .el-textarea__inner{
+  background: #fff;
+}
+.contract .el-input.is-disabled .el-input__inner, .el-textarea.is-disabled .el-textarea__inner{
+  cursor: inherit;
+  background:#fff;
+  border-color: #EBEEF5;
+  color: #333;
+}
+.contract .account-table-cell .cell{
+  background: none !important;
+}
+
+.contract .el-date-editor--daterange.el-input__inner {
+  width: 220px;
+}
+
+
+.contract .cell-range-group{
+  margin: 0 -10px;
+  border-bottom: 1px solid rgba(230,230,230,1);
+}
+.contract .cell-range-group .single{
+  position: relative;
+}
+.contract .cell-range-group .single .el-input-group__append{
+  line-height: 40px;
+  font-weight: bold;
+  text-align: center;
+  color: #5E0EFF;
+  cursor: pointer;
+}
+.contract .cell-range-group .single .el-input__inner{
+  padding: 0 10px;
+  padding-right: 40px;
+}
+.contract .table-input .cell-range-group:nth-last-child(1) {
+  border-bottom: 0;
+}
+.contract .table-input .cell-range-wrapper .el-input {
+  width: 45%;
+}
+.contract .table-input .cell-range-wrapper .el-input:nth-child(1) {
+  float: left;
+}
+.contract .table-input .cell-range-wrapper .el-input:nth-child(1) .el-input__inner{
+  padding-left: 10px;
+}
+.contract .table-input .cell-range-wrapper .el-input:nth-last-child(1) {
+  float: right;
+}
+.contract .table-input .cell-range-wrapper .el-input:nth-last-child(1) .el-input__inner{
+  padding-right: 10px;
+}
+.contract .table-input .cell-range-wrapper .center{
+  float: left;
+  width: 10%;
+  text-align: center;
+  line-height: 40px;
+}
+.contract .require .el-form-item__label{
+  position: relative;
+  padding-left: 10px;
+}
+.contract .require .el-form-item__label::after {
+  position: absolute;
+  left: 0;
+  content: '*';
+  color: #F56C6C;
+  margin-right: 4px;
+}
