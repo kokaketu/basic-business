@@ -1,0 +1,65 @@
+package ${package.Service};
+
+import PageData;
+#if(${superServiceClassPackage})
+import ${superServiceClassPackage};
+#end
+import ${package.Entity}.${entity};
+
+import java.util.Map;
+
+/**
+ * ${table.comment} 服务类
+ * @author ${author}
+ * @since ${date}
+ */
+#if(${superMapperClass})
+public interface ${table.serviceName} extends ${superServiceClass}<${entity}> {
+#else
+public interface ${table.serviceName} {
+#end
+
+        /**
+         * 分页查询
+         *
+         * @param params 查询条件
+         * @return 分页数据
+         */
+        PageData<${entity}> query(Map<String, Object> params);
+
+        /**
+         * 获取详情
+         *
+         * @param id 记录ID
+         * @return 消息详情
+         */
+        ${entity} get(String id);
+
+        /**
+         * 新建记录
+         *
+         * @param dto  消息实例
+         * @param auid 操作用户
+         * @return 操作成功记录数
+         */
+        int add(${entity} dto, String auid);
+
+        /**
+         * 更新记录
+         *
+         * @param dto  实例
+         * @param auid 操作用户
+         * @return 操作成功记录数
+         */
+        int update(${entity} dto, String auid);
+
+        /**
+         * 批量删除记录
+         *
+         * @param ids   ID字符串数组
+         * @param auid  操作用户
+         * @return 操作成功记录数
+         */
+        int deleteBatch(String[] ids, String auid);
+
+}

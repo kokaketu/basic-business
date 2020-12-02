@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="${package.Mapper}.${table.mapperName}">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="${table.mapperName}Map" type="${package.Entity}.${entity}">
+        #foreach($field in ${table.fields})
+        #if(${field.keyFlag})##生成主键排在第一位
+        <id column="${field.name}" property="${field.propertyName}"/>
+        #end
+        #end
+        #foreach($field in ${table.commonFields})##生成公共字段
+        <result column="${field.name}" property="${field.propertyName}"/>
+        #end
+        #foreach($field in ${table.fields})
+        #if(!${field.keyFlag})##生成普通字段
+        <result column="${field.name}" property="${field.propertyName}"/>
+        #end
+        #end
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="${table.mapperName}List">
+        #foreach($field in ${table.commonFields})
+        #if(${field.name} == ${field.propertyName})${field.name}#else${field.name} AS ${field.propertyName}#end
+        #end
+        ${table.fieldNames}
+    </sql>
+
+    <select id="query" parameterType="map" resultType="${package.Entity}.${entity}">
+        SELECT * FROM ${table.name} WHERE is_del = '0'
+        <if test="id != null">
+            and id = #{id}
+        </if>
+    </select>
+
+    <update id="deleteBatch">
+        update ${table.name}
+        <trim prefix='set' suffixOverrides=','>
+            <trim prefix='is_del=case' suffix='end,'>
+                <foreach collection='list' item='item'>
+                    when id = #{item.id} then #{item.isDel}
+                </foreach>
+            </trim>
+            <trim prefix='updated_name=case' suffix='end,'>
+                <foreach collection='list' item='item'>
+                    when id = #{item.id} then #{item.updatedName}
+                </foreach>
+            </trim>
+            <trim prefix='updated_date=case' suffix='end,'>
+                <foreach collection='list' item='item'>
+                    when id = #{item.id} then #{item.updatedDate}
+                </foreach>
+            </trim>
+        </trim>
+        where id in
+        <foreach collection='list' item='item' separator=',' open='(' close=')'>
+            #{item.id}
+        </foreach>
+    </update>
+
+</mapper>

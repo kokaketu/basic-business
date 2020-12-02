@@ -1,0 +1,80 @@
+package ${package.ServiceImpl};
+
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import Constant;
+import PageData;
+import ConvertUtils;
+import BaseServiceImpl;
+import ${package.Entity}.${entity};
+import ${package.Mapper}.${table.mapperName};
+import ${package.Service}.${table.serviceName};
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.Arrays;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
+
+/**
+ * ${table.comment} 服务实现类
+ * @author ${author}
+ * @since ${date}
+ */
+@Service
+#if(${superMapperClass})
+public class ${table.serviceImplName} extends BaseServiceImpl<${table.mapperName}, ${entity}> implements ${table.serviceName} {
+#else
+public class ${table.serviceImplName} extends implements ${table.serviceName} {
+#end
+
+    @Override
+    public PageData<${entity}> query(Map<String, Object> params) {
+        IPage<${entity}> page = getPage(params, Constant.CREATED_DATE, false);
+        List<${entity}> entities = baseDao.query(params);
+        return getPageData(entities, page.getTotal(), ${entity}.class);
+    }
+
+    @Override
+    public ${entity} get(String id) {
+        ${entity} entity = baseDao.selectById(id);
+        return ConvertUtils.sourceToTarget(entity, ${entity}.class);
+    }
+
+    @Override
+    public int add(${entity} dto, String auid) {
+        ${entity} entity = ConvertUtils.sourceToTarget(dto, ${entity}.class);
+##        entity.setCreator(auid);
+        entity.setCreatedDate(new Date());
+##        entity.setUpdater(auid);
+        entity.setUpdatedDate(new Date());
+        return baseDao.insert(entity);
+    }
+
+    @Override
+    public int update(${entity} dto, String auid) {
+        ${entity} entity = baseDao.selectById(dto.getId());
+        if (entity == null) {
+            throw new RuntimeException("记录不存在");
+        }
+        entity = ConvertUtils.sourceToTarget(dto, ${entity}.class);
+##        entity.setUpdater(auid);
+        entity.setUpdatedDate(new Date());
+        return baseDao.updateById(entity);
+    }
+
+    @Override
+    @Transactional
+    public int deleteBatch(String[] ids, String auid) {
+        List<String> idList = Arrays.asList(ids);
+        List<${entity}> entities = baseDao.selectBatchIds(idList);
+        entities.forEach(element -> {
+            element.setIsDel("1");
+            element.setUpdatedDate(new Date());
+##            element.setUpdater(auid);
+        });
+        return baseDao.deleteBatch(entities);
+    }
+
+}

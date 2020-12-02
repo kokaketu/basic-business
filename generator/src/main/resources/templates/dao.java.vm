@@ -1,0 +1,69 @@
+package ${package.Mapper};
+
+#if(${superMapperClassPackage})
+import ${superMapperClassPackage};
+#end
+import ${package.Entity}.${entity};
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+import java.util.Map;
+
+/**
+ * @author ${author}
+ * @since ${date}
+ */
+@Mapper
+@Repository
+#if(${superMapperClass})
+public interface ${table.mapperName} extends ${superMapperClass}<${entity}> {
+#else
+public interface ${table.mapperName} {
+#end
+
+    /**
+     * 分页查询
+     * @param params 查询参数
+     * @return 分页列表
+     */
+##    @Select("<script>" +
+##        " SELECT * FROM ${table.name}" +
+##        " WHERE is_del = '0'" +
+##        " <if test=\"id != null\"> and id = #{id} </if>" +
+##        "</script>")
+    List<${entity}> query(Map<String, Object> params);
+
+    /**
+     * 批量删除
+     * @param entities 实体集合
+     * @return 操作记录数
+     */
+##    @Update("<script>" +
+##        " UPDATE ${table.name} " +
+##        " <trim prefix='set' suffixOverrides=','>" +
+##        "     <trim prefix='is_del=case' suffix='end,'>" +
+##        "         <foreach collection='list' item='item'>" +
+##        "             when id = #{item.id} then #{item.isDel}" +
+##        "         </foreach>" +
+##        "     </trim>" +
+##        "     <trim prefix='updated_name=case' suffix='end,'>" +
+##        "         <foreach collection='list' item='item'>" +
+##        "             when id = #{item.id} then #{item.updatedName}" +
+##        "         </foreach>" +
+##        "     </trim>" +
+##        "     <trim prefix='updated_date=case' suffix='end,'>" +
+##        "         <foreach collection='list' item='item'>" +
+##        "             when id = #{item.id} then #{item.updatedDate}" +
+##        "         </foreach>" +
+##        "     </trim>" +
+##        " </trim>" +
+##        " where id in" +
+##        " <foreach collection='list' item='item' separator=',' open='(' close=')'>" +
+##        "     #{item.id}" +
+##        " </foreach>" +
+##        "</script>")
+    int deleteBatch(List<${entity}> entities);
+}
