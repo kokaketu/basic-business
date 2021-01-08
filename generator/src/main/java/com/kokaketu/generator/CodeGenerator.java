@@ -1,4 +1,4 @@
-package com.kokaketu.business.generator;
+package com.kokaketu.generator;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.core.exceptions.MybatisPlusException;
@@ -91,7 +91,7 @@ public class CodeGenerator {
         // 包配置
         PackageConfig packageConfig = new PackageConfig();
         packageConfig.setModuleName(scanner("模块名"));
-        packageConfig.setParent("com.caicchina.caicinvest");
+        packageConfig.setParent("com.kokaketu.business");
         packageConfig.setMapper("dao");
         autoGenerator.setPackageInfo(packageConfig);
 
@@ -153,10 +153,10 @@ public class CodeGenerator {
         // 公共父类
         // 写于父类中的公共字段
         strategy.setInclude(scanner("表名，多个英文逗号分割").replaceAll(" ", "").split(","));
-//        strategy.setSuperMapperClass("com.caicchina.caicinvest.dao.BaseDao");
-        strategy.setSuperServiceClass("com.caicchina.caicinvest.common.service.BaseService");
-        strategy.setSuperServiceImplClass("com.caicchina.caicinvest.common.service.impl.BaseServiceImpl");
-//        strategy.setSuperControllerClass("com.caicchina.caicinvest.controller.ApiBaseController");
+//        strategy.setSuperMapperClass("com.kokaketu.business.dao.BaseDao");
+        strategy.setSuperServiceClass("com.kokaketu.business.common.service.BaseService");
+        strategy.setSuperServiceImplClass("com.kokaketu.business.common.service.impl.BaseServiceImpl");
+//        strategy.setSuperControllerClass("com.kokaketu.business.controller.ApiBaseController");
         strategy.setControllerMappingHyphenStyle(true);
         strategy.setTablePrefix(packageConfig.getModuleName() + "_");
         autoGenerator.setStrategy(strategy);
