@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kokaketu.business.dao.GeoCityDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="GeoCityDaoMap" type="com.kokaketu.business.entity.GeoCityEntity">
+        <id column="id" property="id"/>
+        <result column="is_del" property="isDel"/>
+        <result column="created_date" property="createdDate"/>
+        <result column="created_by" property="createdBy"/>
+        <result column="created_name" property="createdName"/>
+        <result column="updated_date" property="updatedDate"/>
+        <result column="updated_by" property="updatedBy"/>
+        <result column="updated_name" property="updatedName"/>
+        <result column="province_code" property="provinceCode"/>
+        <result column="city_name" property="cityName"/>
+        <result column="city_code" property="cityCode"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="GeoCityDaoList">
+        id, is_del, created_date, created_by, created_name, updated_date, updated_by, updated_name, province_code, city_name, city_code
+    </sql>
+
+</mapper>

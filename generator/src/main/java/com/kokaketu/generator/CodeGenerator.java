@@ -91,7 +91,7 @@ public class CodeGenerator {
         // 包配置
         PackageConfig packageConfig = new PackageConfig();
         packageConfig.setModuleName(scanner("模块名"));
-        packageConfig.setParent("com.kokaketu.business");
+        packageConfig.setParent("com.kokaketu");
         packageConfig.setMapper("dao");
         autoGenerator.setPackageInfo(packageConfig);
 

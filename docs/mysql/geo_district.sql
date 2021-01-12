@@ -3,10 +3,10 @@ create table geo_district
     id            bigint auto_increment comment '主键id'
         primary key,
     is_del        tinyint  default 0                 not null comment '是否逻辑删除:0.否 1.是',
-    created_date  datetime default CURRENT_TIMESTAMP not null comment '创建时间',
+    created_date  timestamp default CURRENT_TIMESTAMP not null comment '创建时间',
     created_by    varchar(32)                        null comment '创建者code',
     created_name  varchar(32)                        not null comment '创建者名称',
-    updated_date  datetime default CURRENT_TIMESTAMP not null comment '更新时间',
+    updated_date  timestamp default CURRENT_TIMESTAMP not null comment '更新时间',
     updated_by    varchar(32)                        not null comment '更新者code',
     updated_name  varchar(32)                        not null comment '更新者名称',
     city_code     varchar(32)                        not null comment '市adCode',
